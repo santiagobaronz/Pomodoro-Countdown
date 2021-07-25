@@ -1,0 +1,97 @@
+@font-face {
+    font-family: poppins-bold;
+    src: url(../fonts/Poppins-Bold.ttf) format('truetype');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    list-style: none;
+    outline: none;
+    text-decoration: none;
+    font-family: poppins-bold;
+}
+.box-countdown{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(207,59,59);
+    background: linear-gradient(41deg, rgba(207,59,59,1) 0%, rgba(221,126,63,1) 100%);
+}
+.box-countdown h1{
+    text-align: center;
+    padding-top: 50px;
+    color: #fff;
+    font-size: 60px;
+    font-family: poppins-bold;
+    letter-spacing: 4px;
+}
+.time-section{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.minutes , .seconds{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 250px;
+    color: #fff;
+    margin-right: 70px;
+}
+.minutes p, .seconds p{
+    position: relative;
+    z-index: 2;
+}
+.minutes::after{
+    content: ':';
+    position: absolute;
+    right: -80px;
+    z-index: 3;
+}
+.minutes::before , .seconds::before{
+    position: absolute;
+    content: "";
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0.4;
+}
+.minutes::before{
+    background-color: #FFB011;
+}
+.seconds::before{
+    background-color: #FF1111;
+}
+.button-play{
+    background-color: #CF3B3B;
+    padding: 30px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: 70px;
+    transform: translateX(calc(-50% - 40px));
+    cursor: pointer;
+}
+.button-play img, .option-buttons button img{
+    width: 100px;
+}
+.option-buttons{
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 80px;
+    transform: translateX(calc(-50% - 30px));
+}
+.button-option{
+    background-color: #CF3B3B;
+    padding: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 20px;
+}
